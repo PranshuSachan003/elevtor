@@ -59,6 +59,12 @@ namespace LiftSystem
         }
 
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="capacity"></param>
+        /// <param name="status"></param>
         public Lift( int id, int capacity, ElevatorStatus status)
         {
             this.capacity = capacity;

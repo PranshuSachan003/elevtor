@@ -22,7 +22,6 @@ namespace LiftSystem
             // uncomment below line of code
             //lms.ChangeStatusOfLift(l1,Lift.ElevatorStatus.damaged);
 
-
             // checking the lift 
             lms.CallLift(0);
             lms.CallLift(7);
@@ -32,6 +31,8 @@ namespace LiftSystem
             // which trigger below line of code
             // uncomment the below line of code to see this functionality
             //lms.SettingLiftAtMorning();
+
+            // Gives information of each lift
             lms.InfoOfLifts();
         }
     }

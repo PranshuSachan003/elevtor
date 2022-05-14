@@ -26,13 +26,17 @@ namespace LiftSystem
 
         static List<Lift> lifts = new List<Lift>();
 
+        /// <summary>
+        /// This method will register the lift to lift management system
+        /// </summary>
+        /// <param name="lift"></param>
         public void AddLift(Lift lift)
         {
             lifts.Add(lift);
         }
 
         /// <summary>
-        /// This method will set up the lift management system to
+        /// This method will set up lift to their default floor
         /// </summary>
         public void SettingUpSystem()
         {
@@ -40,6 +44,7 @@ namespace LiftSystem
             foreach (var lift in lifts)
             {
                 lift.DefaultStay = ind;
+                lift.FloorNumber = ind;
                 ind = (numberOfFloors / numberOfLifts) * (i);
                 i++;
             }
@@ -47,7 +52,7 @@ namespace LiftSystem
 
         /// <summary>
         /// This special method will call at morning 8 to 9 by lift sensor
-        /// this method will move all lift to default position
+        /// this method will move all lift to ground floor
         /// </summary>
         public void SettingLiftAtMorning()
         {
@@ -55,7 +60,7 @@ namespace LiftSystem
             foreach (var lift in lifts)
             {
                 lift.DefaultStay = defIndex;
-                MoveLiftToDefault(lift);
+                MoveLiftToFloor(lift, defIndex);
             }
         }
 
@@ -83,18 +88,6 @@ namespace LiftSystem
 
             Console.WriteLine(string.Format("You have arrived at floor {0}", floorNo));
             lift.FloorNumber = floorNo;
-            //Moving lift to original its default position
-            MoveLiftToDefault(lift);
-        }
-
-        /// <summary>
-        /// Method will move to lift at their default position
-        /// </summary>
-        /// <param name="lift"></param>
-        private void MoveLiftToDefault(Lift lift)
-        {
-            // lift will move
-            lift.FloorNumber = lift.DefaultStay;
         }
 
         /// <summary>
@@ -149,7 +142,7 @@ namespace LiftSystem
         {
             foreach (var lift in lifts)
             {
-                Console.WriteLine(string.Format("Lift having id {0} stayed on {1} and status {2} has current capacity {3} ", lift.Id, lift.DefaultStay, lift.Status, lift.Capacity - lift.NumPeopleInLift));
+                Console.WriteLine(string.Format("Lift having id {0} stayed on {1} and status {2} has current capacity {3} ", lift.Id, lift.FloorNumber, lift.Status, lift.Capacity - lift.NumPeopleInLift));
             }
         }
     }
