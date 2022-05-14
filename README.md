@@ -42,6 +42,10 @@ b. lift-2 is full or not (capacity) if it is full it will not come to ur locatio
 Here lift will come to ur place means lift arrive at ur location than gate will open for u at floor...
 and lift will not come to ur place means gate of lift will not open for u at ur floor
   
+ChangeStatusOfLift   ---> it will change the status of lift (suppose some lift will get damaged than it needs maintenance u can change its status by calling this method)
+
+
+InfoOfLifts          ---> Give status of all lift where it is, its status and its current capacity
 
 
 

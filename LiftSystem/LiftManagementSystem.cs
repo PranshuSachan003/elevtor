@@ -136,7 +136,7 @@ namespace LiftSystem
         }
 
         /// <summary>
-        /// Give status of all lift where they stay(by default), their status and current capacity they have
+        /// Give status of all lift where it is, its status and its current capacity 
         /// </summary>
         public void InfoOfLifts()
         {
