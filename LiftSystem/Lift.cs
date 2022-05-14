@@ -35,10 +35,35 @@ namespace LiftSystem
             set { numPeopleInLift = value; }
             get { return numPeopleInLift; }
         }
-        public Lift(int capacity, int id)
+
+        private int floorNumber;
+
+        public int FloorNumber
+        {
+            set { floorNumber = value;}
+            get { return floorNumber; }
+        }
+
+        public enum ElevatorStatus
+        {
+            damaged,
+            maintenance,
+            working
+        }
+
+        private ElevatorStatus status;
+        public ElevatorStatus Status
+        {
+            set { status = value; }
+            get { return status; }
+        }
+
+
+        public Lift( int id, int capacity, ElevatorStatus status)
         {
             this.capacity = capacity;
             this.id = id;
+            this.status = status;
         }
     }
 }
