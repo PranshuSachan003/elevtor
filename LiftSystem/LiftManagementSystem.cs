@@ -8,8 +8,8 @@ namespace LiftSystem
 {
     public class LiftManagementSystem
     {
-        // I am assuming floor count with start from 0
-        // in this case floor count will happened from 0 to 7
+        // I am assuming floor count will start from 0
+        // so if total no of floors are 8 then they will be counted from 0 to 7
         private int numberOfFloors = 8;
 
         public int NumberOfFloors
@@ -85,8 +85,7 @@ namespace LiftSystem
         /// <param name="floorNo"></param>
         public void MoveLiftToFloor(Lift lift, int floorNo)
         {
-
-            Console.WriteLine(string.Format("You have arrived at floor {0}", floorNo));
+            Console.WriteLine(string.Format("You have reached to your desired floor {0}", floorNo));
             lift.FloorNumber = floorNo;
         }
 
@@ -118,7 +117,7 @@ namespace LiftSystem
                     }
                     else
                     {
-                        Console.WriteLine("lift having id {0} is full ....please wait for next lift to come at ur place", lift.Id);
+                        Console.WriteLine("lift having id {0} is full ....please wait while the lift is serving to others", lift.Id);
                         break;
                     }
                 }
