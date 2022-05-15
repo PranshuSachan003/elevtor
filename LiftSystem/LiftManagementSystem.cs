@@ -135,13 +135,13 @@ namespace LiftSystem
         }
 
         /// <summary>
-        /// Give status of all lift where it is, its status and its current capacity 
+        /// Give status of all lift where it is, its status and its spcae (how many ppl it can carry more) 
         /// </summary>
         public void InfoOfLifts()
         {
             foreach (var lift in lifts)
             {
-                Console.WriteLine(string.Format("Lift having id {0} stayed on {1} and status {2} has current capacity {3} ", lift.Id, lift.FloorNumber, lift.Status, lift.Capacity - lift.NumPeopleInLift));
+                Console.WriteLine(string.Format("Lift having id {0} stayed on {1} and status {2} has spcae for {3} person", lift.Id, lift.FloorNumber, lift.Status, lift.Capacity - lift.NumPeopleInLift));
             }
         }
     }

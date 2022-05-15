@@ -45,7 +45,7 @@ and lift will not come to ur place means gate of lift will not open for u at ur 
 ChangeStatusOfLift   ---> it will change the status of lift (suppose some lift will get damaged than it needs maintenance u can change its status by calling this method)
 
 
-InfoOfLifts          ---> Give status of all lift where it is, its status and its current capacity
+InfoOfLifts          ---> Give status of all lift where it is, its status and number of ppl it can carry ( if it came 1 it means that particular lift can take 1 more person and if it comes as 0 it means lift is full and it can't take more ppl)
 
 
 
