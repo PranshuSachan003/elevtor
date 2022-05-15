@@ -48,4 +48,11 @@ ChangeStatusOfLift   ---> it will change the status of lift (suppose some lift w
 InfoOfLifts          ---> Give status of all lift where it is, its status and number of ppl it can carry ( if it came 1 it means that particular lift can take 1 more person and if it comes as 0 it means lift is full and it can't take more ppl)
 
 
+---------------------------------------------
+
+Functionality to extend
+1. Can add direction system
+2. if a lift is damaged or in maintenance status than lift serving its above position can provide the service ( suppose lift-1 is damaged than lift-2 can provide service for all the floors 0-7 instead of providing to only 4-7)
+3. Addition of queque in lift to serve more than one people in effective way(suppose lift is going from floor 0 and two person pressed 3 and 1 respectively as their destination floor than lift will open at floor-1 instead of floor-3 logically )
+
 
